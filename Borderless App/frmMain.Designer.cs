@@ -36,12 +36,14 @@
             this.btnRefreshList = new System.Windows.Forms.Button();
             this.toolHelper = new System.Windows.Forms.ToolTip(this.components);
             this.chkClose = new System.Windows.Forms.CheckBox();
+            this.chkChildWin = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // lstProcesses
             // 
             this.lstProcesses.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstProcesses.FormattingEnabled = true;
+            this.lstProcesses.HorizontalScrollbar = true;
             this.lstProcesses.ItemHeight = 15;
             this.lstProcesses.Location = new System.Drawing.Point(12, 35);
             this.lstProcesses.Name = "lstProcesses";
@@ -102,12 +104,25 @@
             this.toolHelper.SetToolTip(this.chkClose, "Choose whether this program will exit after patch\r\ncompletion.");
             this.chkClose.UseVisualStyleBackColor = true;
             // 
+            // chkChildWin
+            // 
+            this.chkChildWin.AutoSize = true;
+            this.chkChildWin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkChildWin.Location = new System.Drawing.Point(12, 224);
+            this.chkChildWin.Name = "chkChildWin";
+            this.chkChildWin.Size = new System.Drawing.Size(176, 22);
+            this.chkChildWin.TabIndex = 5;
+            this.chkChildWin.Text = "Include Child Windows";
+            this.toolHelper.SetToolTip(this.chkChildWin, "Choose whether this program will exit after patch\r\ncompletion.");
+            this.chkChildWin.UseVisualStyleBackColor = true;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(478, 313);
+            this.Controls.Add(this.chkChildWin);
             this.Controls.Add(this.chkClose);
             this.Controls.Add(this.btnRefreshList);
             this.Controls.Add(this.label1);
@@ -131,6 +146,7 @@
         private System.Windows.Forms.Button btnRefreshList;
         private System.Windows.Forms.ToolTip toolHelper;
         private System.Windows.Forms.CheckBox chkClose;
+        private System.Windows.Forms.CheckBox chkChildWin;
     }
 }
 
