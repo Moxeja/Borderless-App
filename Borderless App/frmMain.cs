@@ -72,7 +72,7 @@ namespace Borderless_App
         private readonly char[] splitter = { ' ', '[' };
 
         // Global Variables
-        private List<WindowStats> windowStats = new List<WindowStats>();
+        private readonly List<WindowStats> windowStats = new List<WindowStats>();
         private readonly List<string> igrnoreList = new List<string>()
         { "ApplicationFrameHost", "SystemSettings", "WinStore.App" };
 
@@ -82,6 +82,7 @@ namespace Borderless_App
 
             try
             {
+                // Set window icon to app icon
                 Icon = Icon.ExtractAssociatedIcon(AppDomain.CurrentDomain.FriendlyName);
             } catch { }
         }
@@ -169,18 +170,18 @@ namespace Borderless_App
             return true;
         }
 
-        private void frmMain_Load(object sender, EventArgs e)
+        private void FrmMain_Load(object sender, EventArgs e)
         {
             windowStats.Clear();
             RefreshProcessList();
         }
 
-        private void btnRefreshList_Click(object sender, EventArgs e)
+        private void BtnRefreshList_Click(object sender, EventArgs e)
         {
             RefreshProcessList();
         }
 
-        private void btnPatch_Click(object sender, EventArgs e)
+        private void BtnPatch_Click(object sender, EventArgs e)
         {
             // Check the user has selected something from the process list
             if (lstProcesses.SelectedItem == null)

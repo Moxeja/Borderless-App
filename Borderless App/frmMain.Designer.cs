@@ -59,7 +59,7 @@
             this.btnPatch.Text = "(Un)Patch Process";
             this.toolHelper.SetToolTip(this.btnPatch, resources.GetString("btnPatch.ToolTip"));
             this.btnPatch.UseVisualStyleBackColor = true;
-            this.btnPatch.Click += new System.EventHandler(this.btnPatch_Click);
+            this.btnPatch.Click += new System.EventHandler(this.BtnPatch_Click);
             // 
             // label1
             // 
@@ -80,7 +80,7 @@
             this.btnRefreshList.Text = "Refresh Process List";
             this.toolHelper.SetToolTip(this.btnRefreshList, "Refresh the process list.");
             this.btnRefreshList.UseVisualStyleBackColor = true;
-            this.btnRefreshList.Click += new System.EventHandler(this.btnRefreshList_Click);
+            this.btnRefreshList.Click += new System.EventHandler(this.BtnRefreshList_Click);
             // 
             // toolHelper
             // 
@@ -118,7 +118,7 @@
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Borderless App";
-            this.Load += new System.EventHandler(this.frmMain_Load);
+            this.Load += new System.EventHandler(this.FrmMain_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

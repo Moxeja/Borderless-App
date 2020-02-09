@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Security.Principal;
 using System.Threading;
 using System.Windows.Forms;
 
@@ -20,13 +19,6 @@ namespace Borderless_App
                     MessageBox.Show("Another instance is already running!", "Borderless App", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     Environment.Exit(0);
                 }
-
-                //bool isAdmin = new WindowsPrincipal(WindowsIdentity.GetCurrent()).IsInRole(WindowsBuiltInRole.Administrator);
-                //if (isAdmin)
-                //{
-                    //MessageBox.Show("Do not run this program as admin!", "Borderless App", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    //Environment.Exit(0);
-                //}
 
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
